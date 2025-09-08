@@ -8,9 +8,10 @@ export interface Job {
   candidate_required_location: string;
   url: string;
   description: string;
+  isFavorite?: boolean;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://backend:4000";
 
 export async function fetchJobs(): Promise<Job[]> {
   const res = await fetch(`${API_URL}/jobs`);
