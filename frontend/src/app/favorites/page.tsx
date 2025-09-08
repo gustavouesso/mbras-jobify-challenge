@@ -50,7 +50,7 @@ export default function FavoritesPage() {
 
   return (
     <div>
-        <Button asChild variant="outline" className="mr-2">
+        <Button asChild variant="link" className="mr-2">
           <a href="/" >Voltar para Vagas</a>
         </Button>
         <h1 className="p-6 text-3xl font-bold">Vagas Favoritas ⭐</h1>
