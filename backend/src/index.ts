@@ -8,8 +8,8 @@ app.use(cors());
 app.use(express.json());
 
 const supabase = createClient(
-  process.env.PUBLIC_SUPABASE_URL!,
-  process.env.PUBLIC_SUPABASE_ANON_KEY!
+  process.env.PUBLIC_SUPABASE_URL as string,
+  process.env.PUBLIC_SUPABASE_ANON_KEY as string
 );
 
 app.get("/jobs", async (req: Request, res: Response) => {

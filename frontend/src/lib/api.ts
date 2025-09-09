@@ -11,7 +11,7 @@ export interface Job {
   isFavorite?: boolean;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://backend:4000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export async function fetchJobs(): Promise<Job[]> {
   const res = await fetch(`${API_URL}/jobs`);
@@ -23,6 +23,10 @@ export async function fetchJobs(): Promise<Job[]> {
 }
 
 export async function fetchJobById(id: number): Promise<Job | null> {
+  console.log("Fetching job with ID:", id); // Debug log
+  console.log("API URL:", API_URL); // Debug log
+  console.log(`Fetching from: ${API_URL}/jobs/${id}`); // Debug log 
+  
   const res = await fetch(`${API_URL}/jobs/${id}`);
   if (!res.ok) {
     return null;

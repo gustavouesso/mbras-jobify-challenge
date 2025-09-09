@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Job } from "@/lib/api";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { addFavorite, removeFavorite, getFavorites } from "@/lib/favorites";
+import { addFavorite, removeFavorite } from "@/lib/favorites";
 import Link from "next/link";
 
 interface JobCardProps {

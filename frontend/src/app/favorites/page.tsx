@@ -5,6 +5,7 @@ import { fetchJobById, Job } from "@/lib/api";
 import { getFavorites } from "@/lib/favorites";
 import { JobCard } from "../components/JobCard";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function FavoritesPage() {
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -51,7 +52,7 @@ export default function FavoritesPage() {
   return (
     <div>
         <Button asChild variant="link" className="mr-2">
-          <a href="/" >Voltar para Vagas</a>
+          <Link href="/" >Voltar para Vagas</Link>
         </Button>
         <h1 className="p-6 text-3xl font-bold">Vagas Favoritas ⭐</h1>
         <div className="grid gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3">

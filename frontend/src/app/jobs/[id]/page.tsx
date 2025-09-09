@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { fetchJobById } from "@/lib/api";
+import Link from "next/link";
 
 interface JobPageProps {
   params: { id: string };
@@ -15,7 +16,7 @@ export default async function JobPage({ params }: JobPageProps) {
   return (
     <main className="p-6 space-y-4">
       <Button asChild variant="link" className="mr-2">
-        <a href="/" >Voltar para Vagas</a>
+        <Link href="/" >Voltar para Vagas</Link>
       </Button>
       <h1 className="text-3xl font-bold">{job.title}</h1>
       <p className="text-gray-600">{job.company_name}</p>
